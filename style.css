@@ -3,12 +3,22 @@ body {
   background-color: #1e1e1e;
 }
 
-d1 {
-border-color: red;  
+.d1 {
+padding: 20px;
+border: red dotted 2px;
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: black;
   background-color: lightblue;
   padding: 5px;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  font-size: 25px;
+  height: 50px;
+  border-radius: 10px;
 }
