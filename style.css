@@ -1,23 +1,14 @@
-:root {
---color-background: #101010;  
---color-foreground: #1f1f1fb0;
---color-pattern: #1f1f1f;
-}
-
-html, body {
-    touch-action: manipulation;
-    -ms-content-zooming: none; /* Für ältere IE-Versionen */
-    -webkit-text-size-adjust: 100%; /* Verhindert die automatische Textskalierung in Safari */
-}
-
 body {
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-    font-family: sans-serif;
-    height: 100vh;
-    overflow: hidden;
-   background-color: var(--color-background);
-  background-image: radial-gradient(circle, var(--color-pattern) 1px, transparent 1px);
-  background-size: 14px 14px;
+  color: white;
+  background-color: #1e1e1e;
+}
+
+d1 {
+border-color: red;  
+}
+
+.button {
+  color: black;
+  background-color: lightblue;
+  padding: 5px;
 }
