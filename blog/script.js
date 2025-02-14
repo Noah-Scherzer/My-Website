@@ -1,4 +1,3 @@
-// Lade die Artikelliste aus der automatisch generierten JSON-Datei
 fetch('articles.json')
   .then(response => {
     if (!response.ok) {
