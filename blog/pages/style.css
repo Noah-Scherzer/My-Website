@@ -1,10 +1,16 @@
+:root {
+  --color-text: #83afa6;
+  --color-second: #d3a284;
+  --color-background: #1a1c1e;
+  --color-highlight: #c0dad7;
+}
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #181715;
-  color: #ddd5c4;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 .main-container {
@@ -16,13 +22,19 @@ body {
 hr { /*Linie*/
   border: 0;
   height: 2px;
-  background-color: #8e7e5b;
+  background-color: var(--color-highlight);
 }
 
 strong { /*Fett geschrieben*/
-  color: #8e7e5b;
+  color: var(--color-highlight);
 }
 
 em { /*kursiv geschrieben*/
-  color: #8e7e5b;
+  color: var(--color-highlight);
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  font-family: 'Arial', sans-serif;
+  color: var(--color-second);
 }
