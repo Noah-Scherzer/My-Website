@@ -4,42 +4,16 @@ body {
   margin: 0;
   padding: 0;
   background: #181715;
+  color: #ddd5c4;
 }
 
 /* Hauptcontainer zentriert den Inhalt */
 .main-container {
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Container für die Artikelliste */
-.article-list {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.article-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.article-list li {
-  margin-bottom: 0.5rem;
-}
-
-.article-list a {
-  text-decoration: none;
-  color: blue;
-  cursor: pointer;
-}
-
-.article-list a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Anpassung */
 @media (max-width: 600px) {
   .main-container,
   .article-list {
