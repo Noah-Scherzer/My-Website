@@ -1,0 +1,54 @@
+/* Basis-Styling für den Body der Artikelseite */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Container für den Artikelinhalt */
+.article-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Überschrift im Artikel */
+.article-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Absatz-Styling */
+.article-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Weitere Elemente, z. B. Listen, Zitate etc. */
+.article-content ul,
+.article-content ol {
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #ccc;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: #555;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 600px) {
+  .article-content {
+    max-width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
