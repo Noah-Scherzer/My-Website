@@ -7,11 +7,16 @@ body {
   color: #ddd5c4;
 }
 
-/* Hauptcontainer zentriert den Inhalt */
 .main-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 1rem;
+}
+
+hr {
+  border: 5px;
+  border-radius: 10px;
+  border-color: #9c885e;
 }
 
 @media (max-width: 600px) {
