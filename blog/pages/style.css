@@ -1,4 +1,4 @@
-/* Basis-Styling für den Body */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,16 +13,16 @@ body {
   padding: 1rem;
 }
 
-hr {
-  border: 5px;
-  border-radius: 10px;
-  border-color: #9c885e;
+hr { /*Linie*/
+  border: 0;
+  height: 2px;
+  background-color: #8e7e5b;
 }
 
-@media (max-width: 600px) {
-  .main-container,
-  .article-list {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
+strong { /*Fett geschrieben*/
+  color: #8e7e5b;
+}
+
+em { /*kursiv geschrieben*/
+  color: #8e7e5b;
 }
