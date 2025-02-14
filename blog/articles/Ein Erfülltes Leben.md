@@ -1,7 +1,3 @@
-# Ein erfülltes Leben
-
-
-
 ### **1. Aristoteles und die Eudaimonie: Das gute Leben durch Tugend und Entfaltung**
 
 Für Aristoteles liegt Erfüllung in der **Eudaimonie** („Glückseligkeit“), die nicht mit kurzfristiger Freude, sondern mit einem Leben gemäß der menschlichen Bestimmung verbunden ist.
