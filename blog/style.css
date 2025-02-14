@@ -1,6 +1,48 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 2rem;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5; /* Leicht grauer Hintergrund, optional */
+}
+
+/* Container, der den gesamten Inhalt bündelt */
+.main-container {
+  max-width: 1200px; /* Gesamtbreite der Seite, falls du mehrere Bereiche hast */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Der Artikelbereich, ähnlich wie in Obsidian */
+.content {
+  max-width: 800px;     /* Maximale Breite des Artikels */
+  margin: 2rem auto;    /* Zentriert den Artikel mit oben und unten Abstand */
+  padding: 0 1rem;      /* Etwas Innenabstand für kleine Bildschirme */
+  background: #fff;     /* Weißer Hintergrund für den Artikel */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  border-radius: 5px;   /* Abgerundete Ecken */
+}
+
+/* Optional: Stil für Überschriften im Artikel */
+.content h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 600px) {
+  .content {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+}
+
+/* Artikel-Liste kann auch im .main-container zentriert werden */
+.article-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .article-list ul {
@@ -20,8 +62,4 @@ body {
 
 .article-list a:hover {
   text-decoration: underline;
-}
-
-.content {
-  margin-top: 2rem;
 }
