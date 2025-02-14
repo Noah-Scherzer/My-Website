@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Mein Blog</title>
+  <!-- Einbinden von Marked.js zum Konvertieren von Markdown in HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    .article-list a {
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+    }
+    .article-list a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mein Blog</h1>
+  <div class="article-list">
+    <ul id="articleList">
+      <!-- Artikellinks werden hier eingefügt -->
+    </ul>
+  </div>
+  <div class="content" id="content">
+    <!-- Der Inhalt des ausgewählten Artikels erscheint hier -->
+  </div>
+
+  <script>
+    // Definiere hier die Liste deiner Markdown-Dateien (im Ordner "articles")
+    const articles = [
+      "Mein-Erster-Artikel.md",
+      "Zweiter-Artikel.md"
+    ];
+
+    const articleListEl = document.getElementById('articleList');
+
+    // Erstelle die Artikellinks
+    articles.forEach(filename => {
+      const title = filename.replace('.md', '');
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = "#";
+      a.textContent = title;
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        loadArticle(filename);
+      });
+      li.appendChild(a);
+      articleListEl.appendChild(li);
+    });
+
+    // Funktion zum Laden und Anzeigen eines Artikels
+    function loadArticle(filename) {
+      fetch('articles/' + filename)
+        .then(response => response.text())
+        .then(markdown => {
+          // Markdown in HTML umwandeln
+          const htmlContent = marked.parse(markdown);
+          document.getElementById('content').innerHTML = `<h2>${filename.replace('.md','')}</h2>` + htmlContent;
+        })
+        .catch(error => console.error('Fehler beim Laden des Artikels:', error));
+    }
+  </script>
+</body>
+</html>
