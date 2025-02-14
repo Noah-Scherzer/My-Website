@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <title>Mein Blog</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Marked.js zum Konvertieren von Markdown in HTML -->
+  <!-- Marked.js wird hier nur eingebunden, falls du es später auch für dynamische Inhalte nutzen möchtest -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <h1>Mein Blog</h1>
-  <div class="article-list">
-    <ul id="articleList">
-      <!-- Artikellinks werden hier dynamisch hinzugefügt -->
-    </ul>
-  </div>
-  <div class="content" id="content">
-    <!-- Hier wird der Inhalt des ausgewählten Artikels angezeigt -->
+  <div class="main-container">
+    <h1>Mein Blog</h1>
+    <div class="article-list">
+      <ul id="articleList">
+        <!-- Hier werden die Artikellinks dynamisch eingefügt -->
+      </ul>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
