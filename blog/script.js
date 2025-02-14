@@ -1,7 +1,8 @@
+// Lade die Artikelliste aus der JSON-Datei
 fetch('articles.json')
   .then(response => {
     if (!response.ok) {
-      throw new Error('Netzwerkantwort war nicht ok');
+      throw new Error('Fehler beim Laden der Artikel-Liste');
     }
     return response.json();
   })
@@ -11,7 +12,7 @@ fetch('articles.json')
       const title = article.filename.replace('.md', '');
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = "#";
+      a.href = '#';
       a.textContent = title;
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -33,7 +34,7 @@ function loadArticle(filename) {
       return response.text();
     })
     .then(markdown => {
-      // Markdown in HTML umwandeln (mithilfe von Marked.js)
+      // Wandle Markdown in HTML um
       const htmlContent = marked.parse(markdown);
       document.getElementById('content').innerHTML = `<h2>${filename.replace('.md', '')}</h2>` + htmlContent;
     })
