@@ -3,13 +3,12 @@ body{
   font-family: "Roboto", serif;
   font-weight: 700;
   /*outline: red dashed 1px;*/
-  background-color: #080808;
+  background: transparent;
   color: white;
   margin-top: 10px;
   margin: auto;
   width: 50%;
   padding: 10px;
-  transition: background 5s;
 }
 
 .standartDiv{
