@@ -116,7 +116,7 @@
   let mouseX = 0, mouseY = 0, scrollPos = 0;
   
   document.addEventListener('mousemove', event => {
-    mouseX = event.clientX / window.innerWidth;
+    mouseX = - (event.clientX / window.innerWidth);
     mouseY = event.clientY / window.innerHeight;
   });
   
@@ -130,7 +130,7 @@
     
     // Kamera-Pivot: Bewege die Kamera bei Scrollen und rotiere sie bei Mausbewegung
     cameraPivot.position.y = -scrollPos * 0.002;
-    cameraPivot.rotation.y = (mouseX - 0.5) * 0.2;
+    cameraPivot.rotation.y = (mouseX + 0.5) * 0.2;
     cameraPivot.rotation.x = -(mouseY - 0.5) * 0.2;
     
     // Partikel: Positionen aktualisieren und in der Kugel bleiben
