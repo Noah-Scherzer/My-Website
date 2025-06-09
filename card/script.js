@@ -4,13 +4,23 @@ const permissionBtn = document.getElementById("permission-btn");
 function handleOrientation(event) {
   const { beta, gamma } = event;
 
-  const x = Math.min(Math.max(gamma, -45), 45) / 45;
-  const y = Math.min(Math.max(beta, -45), 45) / 45;
+  // Werte begrenzen
+  const clampedGamma = Math.min(Math.max(gamma, -45), 45);
+  const clampedBeta = Math.min(Math.max(beta, -45), 45);
 
-  const posX = 50 + x * 50;
-  const posY = 50 + y * 50;
+  // Werte skalieren
+  const x = clampedGamma / 45;
+  const y = clampedBeta / 45;
 
-  highlight.style.background = `radial-gradient(circle at ${posX}% ${posY}%, rgba(255,255,255,0.25), transparent 60%)`;
+  // Basiswinkel für Licht von oben rechts
+  const baseAngle = 135;
+  const angleOffset = x * 20 + y * 15;
+  const angle = baseAngle + angleOffset;
+
+  // Position für Verlauf
+  const lightPos = 30 + x * 20; // Optional für Position im Verlauf
+
+  highlight.style.background = `linear-gradient(${angle}deg, rgba(255,255,255,0.2) ${lightPos}%, transparent ${lightPos + 40}%)`;
 }
 
 function initSensor() {
